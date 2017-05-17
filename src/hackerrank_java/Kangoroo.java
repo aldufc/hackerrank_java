@@ -8,8 +8,7 @@ package hackerrank_java;
 /**
  *
  * @author Alexandre Arruda
- */
-import java.io.*;
+ */import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
@@ -18,12 +17,12 @@ import java.util.regex.*;
 public class Kangoroo {
 
     public static void main(String[] args) {
+        int x1,v1,x2,v2;
         Scanner in = new Scanner(System.in);
-        System.out.println("Digite: ");
-        int x1 = in.nextInt();
-        int v1 = in.nextInt();
-        int x2 = in.nextInt();
-        int v2 = in.nextInt();
+        x1 = in.nextInt();
+        v1 = in.nextInt();
+        x2 = in.nextInt();
+        v2 = in.nextInt();
         
         if(v2 == v1){
             if(x1 == x2)
@@ -32,11 +31,11 @@ public class Kangoroo {
                 System.out.println("NO");
         }
         else{
-            int div = (x1-x2)/(v2-v1);
-            if(div >=0 && (v2-v1)*div == (x1-x2))
-                System.out.println("YES");
+            if((x1-x2) % (v2-v1) == 0 && (x1-x2)/(v2-v1) >= 0 )
+               System.out.println("YES");
             else
-                System.out.println("NO");
+              System.out.println("NO");
+
         }
     }
 }
